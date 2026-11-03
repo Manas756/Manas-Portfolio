@@ -1,0 +1,172 @@
+{
+  "_note": "Single source of truth for the resume. Edit this file, then run: python resume/build_resume.py  (writes PDF + DOCX + preview image). Items wrapped in [brackets] are placeholders to confirm.",
+  "name": "Manas Kapoor",
+  "headline": "Backend Engineer  |  Full Stack Developer",
+  "contact": [
+    {
+      "text": "Hamirpur, Himachal Pradesh"
+    },
+    {
+      "text": "+91 70180 15360",
+      "href": "tel:+917018015360"
+    },
+    {
+      "text": "manaskapoor033@gmail.com",
+      "href": "mailto:manaskapoor033@gmail.com"
+    },
+    {
+      "text": "linkedin.com/in/manas-kapoor-5075b9347",
+      "href": "https://www.linkedin.com/in/manas-kapoor-5075b9347/"
+    },
+    {
+      "text": "github.com/Manas756",
+      "href": "https://github.com/Manas756"
+    },
+    {
+      "text": "leetcode.com/u/MANAS50",
+      "href": "https://leetcode.com/u/MANAS50/"
+    }
+  ],
+  "summary": "Computer Science undergraduate at Himachal Pradesh Technical University focused on backend engineering and full-stack web development. Built and deployed the official Chaitanya 2K26 festival website while leading its technical team, led a team to win a tech-fest hackathon of 25 teams, and has solved 300+ LeetCode problems in C++.",
+  "education": [
+    {
+      "title": "B.Tech, Computer Science and Engineering",
+      "org": "Himachal Pradesh Technical University, Hamirpur",
+      "date": "Expected 2029"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Technical Team Lead & Website Developer",
+      "org": "Chaitanya 2K26, HPTU Hamirpur",
+      "date": "2026",
+      "link": {
+        "text": "chaitanyahptu.dev",
+        "href": "https://www.chaitanyahptu.dev/"
+      },
+      "bullets": [
+        "Led the fest's technical team; owned the official website end to end, from build to deployment.",
+        "Helped organize the fest's competitive programming contest."
+      ]
+    },
+    {
+      "title": "Web Developer Intern",
+      "org": "InAmigos Foundation",
+      "date": "Jun 2026 - Jul 2026",
+      "bullets": [
+        "Fixed issues and improved existing pages on the foundation's website during a one-month web development internship."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Chaitanya 2K26 - HPTU Tech & Cultural Fest Website",
+      "stack": "Nuxt 3, Vue 3, Three.js, GSAP",
+      "link": {
+        "text": "chaitanyahptu.dev",
+        "href": "https://www.chaitanyahptu.dev/"
+      },
+      "bullets": [
+        "Built the official festival website with an interactive 3D (Three.js) hero, presenting 21 events and 2 workshops across five tracks with online team registration.",
+        "Deployed, hosted and integrated the site with backend services; it stayed fast and stable through the three festival days."
+      ]
+    },
+    {
+      "title": "EdgeCase - ICPC-Style Competitive Programming Platform",
+      "stack": "Next.js, TypeScript, Judge0",
+      "link": {
+        "text": "GitHub",
+        "href": "https://github.com/Manas756/Edge-Case-Competitive-Programming-website"
+      },
+      "bullets": [
+        "Building an open-source contest platform with a multi-language browser editor, per-participant timers, a live leaderboard and ICPC-style penalty scoring; architecture targets ~10,000 concurrent local users.",
+        "Isolated code execution behind a pluggable judge adapter (Judge0 sandbox), enforced every rule server-side with HMAC-signed sessions, and built an organizer console with CSV export."
+      ]
+    },
+    {
+      "title": "CampusPulse - AI-Powered Campus Complaint Management",
+      "stack": "Next.js | Hackathon project",
+      "bullets": [
+        "Built an anonymous campus-issue reporting platform with photo uploads, tracking by unique ticket ID, and admin and super-admin dashboards.",
+        "Added AI analysis that scores each complaint 0-100 by risk, plus a three-tier, 72-hour auto-escalation chain (Teacher, Faculty, Administration)."
+      ],
+      "link": {
+        "text": "Live",
+        "href": "https://campus-speed-run.vercel.app/"
+      }
+    },
+    {
+      "title": "ROG - Voice-First Desktop AI Assistant",
+      "stack": "Electron, TypeScript, Whisper, Zod, Vitest",
+      "bullets": [
+        "Built a wake-word desktop assistant for Windows that opens apps, sites and projects and runs user-taught multi-step workflows, with multilingual support.",
+        "Ran OpenAI Whisper locally on the GPU (~0.3 s, no audio leaves the PC); mapped speech and AI output to a typed action catalog so nothing reaches a shell; 100 unit/integration tests."
+      ],
+      "link": {
+        "text": "GitHub",
+        "href": "https://github.com/Manas756/Rog-The-Ai-Assistant"
+      }
+    },
+    {
+      "title": "ShatranjX - Real-Time Multiplayer Chess",
+      "stack": "Node.js, Express, Socket.io, Chess.js",
+      "link": {
+        "text": "Live",
+        "href": "https://shatranjx-com-master-the-game.onrender.com/"
+      },
+      "bullets": [
+        "Server-authoritative game logic with matchmaking, private rooms and Stockfish AI opponents; deployed on Render."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "lead": "Winner, Tech-Fest Hackathon",
+      "text": "Led the team to first place among 25 participating teams."
+    },
+    {
+      "lead": "Hackathon Team Lead",
+      "text": "Led teams at Adobe Hackathon, Colosseum, Mock SIH and Smart India Hackathon activities."
+    },
+    {
+      "lead": "Hackathon Participant",
+      "text": "PayPal AI Hackathon, HackerRank Orchestra Hackathon."
+    },
+    {
+      "lead": "e-Yantra (IIT Bombay), Participant",
+      "text": "Representing HPTU in the e-Yantra robotics program."
+    },
+    {
+      "lead": "LeetCode",
+      "text": "300+ problems solved in C++; competing in weekly contests."
+    }
+  ],
+  "skills": [
+    {
+      "label": "Languages",
+      "items": "C++, JavaScript, TypeScript; Data Structures & Algorithms"
+    },
+    {
+      "label": "Backend",
+      "items": "Node.js, Express.js, REST APIs, Socket.io"
+    },
+    {
+      "label": "Frontend",
+      "items": "React, Next.js, HTML, CSS, Tailwind CSS, Framer Motion, GSAP, Three.js, React Three Fiber"
+    },
+    {
+      "label": "Databases",
+      "items": "MongoDB, PostgreSQL, MySQL"
+    },
+    {
+      "label": "Tools",
+      "items": "Git, GitHub, Linux, Vercel, Render"
+    }
+  ],
+  "certifications": [
+    {
+      "lead": "C++ Mastery Workshop",
+      "text": "IIT Delhi"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #09090a;
+  --color-coal: #111113;
+  --color-graphite: #1b1b1e;
+  --color-smoke: #2a2a2e;
+  --color-steel: #8a8e96;
+  --color-silver: #c6c9ce;
+  --color-paper: #ecebe7;
+  --color-bone: #f5f4f0;
+  --color-ember: #ff6a3d;
+
+  --font-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --breakpoint-xs: 26rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    font-family: var(--font-display);
+    background: var(--color-ink);
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ember);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  img {
+    user-select: none;
+  }
+}
+
+@layer components {
+  /* Polished-metal type. Used sparingly: the name, numerals, a few headings. */
+  .text-chrome {
+    background-image: linear-gradient(
+      178deg,
+      #fbfbfc 0%,
+      #d9dce0 22%,
+      #9ba0a8 44%,
+      #5d6168 50%,
+      #c9ccd2 58%,
+      #eef0f2 74%,
+      #9a9fa7 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-chrome-dark {
+    background-image: linear-gradient(178deg, #3a3d42 0%, #0f1012 46%, #55585e 56%, #18191b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .sheen {
+    position: relative;
+  }
+  .sheen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, transparent 35%, rgb(255 255 255 / 0.55) 50%, transparent 65%);
+    background-size: 250% 100%;
+    background-position: 120% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    pointer-events: none;
+    animation: sheen 2.6s var(--ease-quart) 0.4s 1 both;
+  }
+  @keyframes sheen {
+    to {
+      background-position: -120% 0;
+    }
+  }
+
+  .font-wide {
+    font-stretch: 125%;
+  }
+  .font-condensed {
+    font-stretch: 72%;
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .hairline {
+    border-color: rgb(255 255 255 / 0.09);
+  }
+
+  .grain {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    opacity: 0.055;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .grid-lines-dark {
+    background-image:
+      linear-gradient(to right, rgb(0 0 0 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(0 0 0 / 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheen::after {
+    animation: none;
+    display: none;
+  }
+}
