@@ -180,9 +180,9 @@ export const projects = [
     mockup: 'shatranjx',
   },
   {
-    id: 'campuspulse',
+    id: 'campulse',
     index: '05',
-    name: 'CampusPulse',
+    name: 'CamPulse',
     title: 'AI-Powered Campus Complaint Management',
     bgWord: 'PULSE',
     category: 'AI · Hackathon build',
